@@ -58,7 +58,7 @@ Follow these instructions to update this fork from the official Honeypot for Con
 
 	# Add the remote, call it "upstream" (only the first time you do it):
 
-	git remote add upstream https://github.com/nocean/cf7-honeypot.git
+	git remote add upstream https://github.com/wpexpertsio/cf7-honeypot.git
 
 	# Fetch all the branches of that remote into remote-tracking branches:
 
@@ -78,7 +78,7 @@ Follow these instructions to update this fork from the official Honeypot for Con
 1. Two cases:
 	1. Either the last commit in upstream/master **is** the last release commit so: rebase this branch from `master` (or merge `master` into it) and push;
 	1. Or the last commit in upstream/master **is not** the last release commit so:
-		1. [Find the tag from the last plugin version](https://github.com/nocean/cf7-honeypot/tags);
+		1. [Find the tag from the last plugin version](https://github.com/wpexpertsio/cf7-honeypot/tags);
 		1. Fetch it: `git fetch upstream refs/tags/2.1` (“2.1” is the tag name for this example);
 		1. Merge this tag into `cf7-a11y` branch. Just like: `git merge 2.1` and push.
 1. Test it into a local WordPress project.
