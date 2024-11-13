@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Honeypot for Contact Form 7
+ * Plugin Name: Honeypot for Contact Form 7 (for Contact Form 7 with accessibility fixes)
  * Plugin URI: https://wpexperts.io/
  * Description: Add honeypot anti-spam functionality to the popular Contact Form 7 plugin.
- * Author: WPExperts
- * Author URI: https://wpexperts.io/
- * Version: 2.1.7
+ * Author: WPExperts, modifications by Julie Moynat
+ * Author URI: https://github.com/juliemoynat/cf7-honeypot/releases
+ * Version: 2.1.7-a11y.1
  * Text Domain: contact-form-7-honeypot
  * Domain Path: /languages/
- * Requires Plugins: contact-form-7
+ * Requires Plugins: contact-form-7-a11y
  *
  * @package Honeypot4CF7
  */
@@ -21,7 +21,12 @@ define( 'HONEYPOT4CF7_PLUGIN_BASENAME', plugin_basename( HONEYPOT4CF7_PLUGIN ) )
 define( 'HONEYPOT4CF7_PLUGIN_NAME', trim( dirname( HONEYPOT4CF7_PLUGIN_BASENAME ), '/' ) );
 define( 'HONEYPOT4CF7_PLUGIN_DIR', untrailingslashit( dirname( HONEYPOT4CF7_PLUGIN ) ) );
 define( 'HONEYPOT4CF7_PLUGIN_DIR_URL', untrailingslashit( plugin_dir_url( HONEYPOT4CF7_PLUGIN ) ) );
-define( 'HONEYPOT4CF7_DEP_PLUGIN', 'contact-form-7/wp-contact-form-7.php' );
+/**
+ * #cf7-a11y-start
+ * Change the path to Contact Form 7 file in order to make the plugin works with Contact Form 7 with accessibility fixes
+ */
+define( 'HONEYPOT4CF7_DEP_PLUGIN', 'contact-form-7-a11y/wp-contact-form-7.php' );
+/** #cf7-a11y-end */
 
 if ( defined( 'WPCF7_VERSION' ) ) {
 	define( 'HONEYPOT4CF7_WPCF7_VERSION', WPCF7_VERSION );
